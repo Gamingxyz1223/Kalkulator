@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 90vh;
+                background: linear-gradient(45deg, white, black, white, black);
+            }
+
+            .input-one,
+            .input-two {
+                font-size: 18px;
+                border-radius: 5px;
+                padding: 5px 7px;
+            }
+
+            .btn {
+                padding: 8px;
+                border-radius: 7px;
+                background: transparent;
+                color: white;
+                font-size: 18px;
+            }
+
+            .btn:hover {
+                background: lightgreen;
+                color: #333;
+            }
+
+            .result {
+                color: white;
+                font-size: 30px;
+            }
+
+            .plus {
+                font-size: 19px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="" method="post" accept-charset="utf-8">
+            <input class="input-one" type="text" name="" id="" value="" />
+            <p class="plus">+</p>
+            <input class="input-two" type="text" name="" id="" value="" />
+            <br />
+            <br />
+            <input
+                class="btn"
+                onclick="hasil()"
+                type="button"
+                value="Calculate"
+            />
+            <p class="result"></p>
+        </form>
+        <script>
+            function hasil() {
+                let one = document.querySelector(".input-one").value;
+                let two = document.querySelector(".input-two").value;
+
+                let result = one + two;
+                document.querySelector(".result").innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
